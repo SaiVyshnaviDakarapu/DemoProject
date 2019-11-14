@@ -21,7 +21,9 @@ public class LoginTest extends DriverCreation {
 		driverCreation.launchApplication();
 		loginPage=new LoginPage(driverCreation.driver);;;
 		
+		
 	}
+
 	@BeforeMethod
 	void verifyApplicationLaunched() {
 		
@@ -32,11 +34,13 @@ public class LoginTest extends DriverCreation {
 	@Test
 	void loginToApplication() {
 		
-		loginPage.loginToTheApplication();
+		loginPage.loginToTheApplication(loginPage.randomString());
+		
 		
 	}
+	
 	@AfterSuite
 	void execution() {
-		loginPage.tearDown();
+		driverCreation.tearDown();
 	}
 }
