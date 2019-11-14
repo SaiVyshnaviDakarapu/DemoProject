@@ -41,11 +41,7 @@ public class LoginPage extends DriverCreation {
 	String titleName="GTPL Bank Home Page";
 	public void loginToTheApplication() {
 		userIdField.sendKeys(prop.getProperty("userName"));
-		passwordField.sendKeys(prop.getProperty("password"));
-		
-		
-		
-		
+		passwordField.sendKeys(prop.getProperty("password"));		
 		loginButton.click();
 	}
 	
