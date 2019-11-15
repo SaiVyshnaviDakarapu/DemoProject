@@ -10,9 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.demo.DriverManager.DriverCreation;
-import com.demo.utils.TestUtils;
 
-public class LoginPage extends TestUtils {
+
+public class LoginPage extends DriverCreation {
 	WebDriver driver=null;
 	
 	
@@ -39,12 +39,11 @@ public class LoginPage extends TestUtils {
 	
 	String appName="Gtpl Bank";
 	String titleName="GTPL Bank Home Page";
-	public void loginToTheApplication(String userName) {
-		/*userIdField.sendKeys(prop.getProperty("userName"));
-		passwordField.sendKeys(prop.getProperty("password"))*/
+	public void loginToTheApplication() {
+		userIdField.sendKeys(prop.getProperty("userName"));
+		passwordField.sendKeys(prop.getProperty("password"));
 		
-		;
-		userIdField.sendKeys(("userName"));
+		
 		
 		
 		loginButton.click();

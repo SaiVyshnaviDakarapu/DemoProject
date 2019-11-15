@@ -34,7 +34,7 @@ public class LoginTest extends DriverCreation {
 	@Test
 	void loginToApplication() {
 		
-		loginPage.loginToTheApplication(loginPage.randomString());
+		loginPage.loginToTheApplication();
 		
 		
 	}
